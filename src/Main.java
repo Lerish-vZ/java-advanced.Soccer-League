@@ -13,16 +13,12 @@ public class Main {
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
                 String teamName1 = line.split(" ")[0]; //correct
-                System.out.println(teamName1);
                 String t1Score = line.substring((line.indexOf(",") - 1), (line.indexOf(",")));
-                System.out.println(t1Score);
                 String teamName2 = line.substring((line.lastIndexOf(",") + 2), line.lastIndexOf(" "));
-                System.out.println(teamName2);
                 String t2Score = line.substring(line.lastIndexOf(" ")).trim();
-                System.out.println(t2Score);
                 scoreboard.setScoreboard(teamName1);
                 scoreboard.setScoreboard(teamName2);
-                match.setMatch(line);
+                match.setMatch(teamName1, teamName2, t1Score, t2Score);
             }
             System.out.println(match.getMatch());
             System.out.println(scoreboard.getScoreboard());
