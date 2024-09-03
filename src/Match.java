@@ -1,13 +1,14 @@
 import java.io.*;
+import java.util.ArrayList;
 
 public class Match {
-    private String match;
+    private ArrayList<String> match = new ArrayList<>();
 
-    public Match(String match) {
-        this.match = match;
+    public void setMatch(String match) {
+        this.match.add(match);
     }
 
-    public String getMatch() {
+    public ArrayList<String> getMatch() {
         return match;
     }
 }
