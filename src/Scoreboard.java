@@ -14,4 +14,8 @@ public class Scoreboard {
     public int getScore(String teamName) {
         return score.get(teamName);
     }
+
+    public String getScoreboard(){
+        return score.toString();
+    }
 }
