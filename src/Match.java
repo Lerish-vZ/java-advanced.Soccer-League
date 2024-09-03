@@ -10,6 +10,4 @@ public class Match {
     public String getMatch() {
         return match;
     }
-
-    public
 }
