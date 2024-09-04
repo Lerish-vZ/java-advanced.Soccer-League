@@ -34,17 +34,17 @@ public class Main {
         System.out.println(scoreboard.getScoreboard());
     }
 
-    public static void calcScore(String team1, String score1, String team2, String score2) {
-//        int iScore1 = Integer.parseInt(score1);
-//        int iScore2 = Integer.parseInt(score2);
-
-        if(iScore1 == iScore2){
-            scoreboard.incScore(team1, 1);
-            scoreboard.incScore(team2, 1);
-        } else if(iScore1 > iScore2){
-            scoreboard.incScore(team1, 3);
-        } else if(iScore1 < iScore2){
-            scoreboard.incScore(team2, 3);
-        }
-    }
+//    public static void calcScore(String team1, String score1, String team2, String score2) {
+////        int iScore1 = Integer.parseInt(score1);
+////        int iScore2 = Integer.parseInt(score2);
+//
+//        if(iScore1 == iScore2){
+//            scoreboard.incScore(team1, 1);
+//            scoreboard.incScore(team2, 1);
+//        } else if(iScore1 > iScore2){
+//            scoreboard.incScore(team1, 3);
+//        } else if(iScore1 < iScore2){
+//            scoreboard.incScore(team2, 3);
+//        }
+//    }
 }
