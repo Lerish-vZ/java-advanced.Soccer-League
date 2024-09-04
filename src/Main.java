@@ -17,10 +17,14 @@ public class Main {
                 String t1Score = line.substring((line.indexOf(",") - 1), (line.indexOf(",")));
                 String teamName2 = line.substring((line.lastIndexOf(",") + 2), line.lastIndexOf(" "));
                 String t2Score = line.substring(line.lastIndexOf(" ")).trim();
+
                 scoreboard.setScoreboard(teamName1);
                 scoreboard.setScoreboard(teamName2);
+
                 match.setMatch(teamName1, teamName2, t1Score, t2Score);
+                System.out.println(scoreboard.getScoreboard());
             }
+            match.setScore();
             System.out.println(match.getMatch());
             System.out.println(scoreboard.getScoreboard());
             sc.close();

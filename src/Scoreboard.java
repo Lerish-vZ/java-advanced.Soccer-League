@@ -2,13 +2,15 @@ import java.util.HashMap;
 
 public class Scoreboard {
     static HashMap <String, Integer> score = new HashMap<>(6);
-
+    public static Integer points = 0;
     public void setScoreboard(String teamName) {
-        score.put(teamName, 0);
+        score.put(teamName, points);
     }
 
     public static void incScore(String teamName, int inc) {
-        score.put(teamName, score.get(teamName) + inc);
+        points = score.get(teamName);
+        points += inc;
+        score.put(teamName, points);
     }
 
     public int getScore(String teamName) {
