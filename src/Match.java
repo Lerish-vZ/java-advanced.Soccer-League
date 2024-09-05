@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class Match {
     private ArrayList<Integer> scores = new ArrayList<>();
     private ArrayList <String> teams = new ArrayList<>();
+
     static Scoreboard scoreboard = new Scoreboard();
 
 
@@ -12,6 +13,7 @@ public class Match {
         scores.add(Integer.parseInt(score1));
         scores.add(Integer.parseInt(score2));
         teams.add(team2);
+
     }
     public ArrayList<String> getTeamNames(){
         return teams;
@@ -29,10 +31,10 @@ public class Match {
         return match;
     }
 
-    public void setScore(){
+    public void setScore(int numMatches){
         int j = 0;
         int k = 1;
-    for (int i = 0; i <= (scores.size() - 1); i++) {
+    for (int i = 0; i <= (numMatches - 1); i++) {
         if (scores.get(j) == scores.get(k)) {
             scoreboard.incScore(teams.get(j), 1);
             scoreboard.incScore(teams.get(k), 1);

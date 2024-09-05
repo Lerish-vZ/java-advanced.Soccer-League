@@ -3,6 +3,7 @@ import java.util.HashMap;
 public class Scoreboard {
     static HashMap <String, Integer> score = new HashMap<>(6);
     public static Integer points = 0;
+
     public void setScoreboard(String teamName) {
         score.put(teamName, points);
     }
