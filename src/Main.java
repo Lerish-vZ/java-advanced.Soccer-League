@@ -27,33 +27,14 @@ public class Main {
                 scoreboard.setScoreboard(teamName2);
 
                 match.setMatch(teamName1, teamName2, t1Score, t2Score);
-                System.out.println(scoreboard.getScoreboard());
             }
             match.setScore(count);
-            System.out.println(match.getMatch());
-            System.out.println(scoreboard.getScoreboard());
             sc.close();
         } catch (FileNotFoundException e) {
             System.out.println("Error occurred.");
             e.printStackTrace();
         }
-
-
-
-        System.out.println(scoreboard.getScoreboard());
+        scoreboard.getScoreboard();
     }
 
-//    public static void calcScore(String team1, String score1, String team2, String score2) {
-////        int iScore1 = Integer.parseInt(score1);
-////        int iScore2 = Integer.parseInt(score2);
-//
-//        if(iScore1 == iScore2){
-//            scoreboard.incScore(team1, 1);
-//            scoreboard.incScore(team2, 1);
-//        } else if(iScore1 > iScore2){
-//            scoreboard.incScore(team1, 3);
-//        } else if(iScore1 < iScore2){
-//            scoreboard.incScore(team2, 3);
-//        }
-//    }
 }

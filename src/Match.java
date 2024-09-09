@@ -47,17 +47,5 @@ public class Match {
         k += 2;
     }
 
-
-//        int iScore1 = Integer.parseInt(score1);
-//        int iScore2 = Integer.parseInt(score2);
-
-//        if(iScore1 == iScore2){
-//            scoreboard.incScore(team1, 1);
-//            scoreboard.incScore(team2, 1);
-//        } else if(iScore1 > iScore2){
-//            scoreboard.incScore(team1, 3);
-//        } else if(iScore1 < iScore2){
-//            scoreboard.incScore(team2, 3);
-//        }
     }
 }
