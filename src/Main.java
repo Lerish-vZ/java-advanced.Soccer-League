@@ -20,9 +20,6 @@ public class Main {
                 String teamName2 = line.substring((line.lastIndexOf(",") + 2), line.lastIndexOf(" "));
                 String t2Score = line.substring(line.lastIndexOf(" ")).trim();
 
-                //match function in scoreboard calculate the points, match send integer and teamname back
-                //check if team is in hashmap, if not add team with points, if not
-
                 scoreboard.setScoreboard(teamName1);
                 scoreboard.setScoreboard(teamName2);
 
