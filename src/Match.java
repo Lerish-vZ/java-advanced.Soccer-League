@@ -15,7 +15,6 @@ public class Match {
         teams.add(team2);
 
     }
-    
 
     public void setScore(int numMatches){
         int j = 0;

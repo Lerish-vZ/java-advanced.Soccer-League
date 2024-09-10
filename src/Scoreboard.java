@@ -14,10 +14,6 @@ public class Scoreboard {
         score.put(teamName, points);
     }
 
-    public int getScore(String teamName) {
-        return score.get(teamName);
-    }
-
     public void getScoreboard() {
         String display = "League Resulst: \n";
 
