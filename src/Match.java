@@ -15,21 +15,7 @@ public class Match {
         teams.add(team2);
 
     }
-    public ArrayList<String> getTeamNames(){
-        return teams;
-    }
-
-    public ArrayList<Integer> getScores(){
-        return scores;
-    }
-
-    public String getMatch(){
-        String match = "";
-        for (int i = 0; i < scores.size(); i++) {
-            match += teams.get(i) + " " + scores.get(i) + " ";
-        }
-        return match;
-    }
+    
 
     public void setScore(int numMatches){
         int j = 0;
