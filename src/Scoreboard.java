@@ -21,26 +21,31 @@ public class Scoreboard {
     public void getScoreboard() {
         String display = "League Resulst: \n";
 
-                LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
-        ArrayList<Integer> list = new ArrayList<>();
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(score.entrySet());
 
-        for (Map.Entry<String, Integer> entry : score.entrySet()) { //populates list with points
-            list.add(entry.getValue());
-        }
-        Collections.sort(list);
-
-        for (int num = list.getLast(); num >= 0; num--) {
-            for (Map.Entry<String, Integer> entry : score.entrySet()) {
-                if (entry.getValue().equals(num)) {
-                    sortedMap.put(entry.getKey(), num);
-                }
+        list.sort((e1, e2) -> {
+            int valueComparison = e2.getValue().compareTo(e1.getValue());
+            /*
+            In the line above, we are comparing the second entries value (in this case the points) to the first entries value. We do the second one first to order them in decending order.
+            If value 2 > value 1 the valueComparison = 1; thus they put entry 2 in front of entry 1.
+            If value 2 < value 1 the valueComparison = -1; thus it puts entry 1 in front of entry 2.
+             */
+            if(valueComparison == 0){
+                return e1.getKey().compareTo(e2.getKey());
             }
+            /*
+            If value 2 == value 1 the valueComparison = 0. Now we want to sort it according to the keys in ascending order.
+            thus we compare key 1 to key 2 and according to the number returned 1, -1, 0 it is ordered.
+             */
+            return valueComparison;
+        });
+
+        LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
+        for(Map.Entry<String, Integer> entry : list){
+            sortedMap.put(entry.getKey(), entry.getValue());
         }
 
         int rank = 1;
-
-        Iterator it = sortedMap.entrySet().iterator();
-        it.next();
 
         for(Map.Entry<String, Integer> entry : sortedMap.entrySet()) {
                 display +=  "\n" + rank + ". " + "\n" + entry.getKey() + " " + entry.getValue() + "\n";
@@ -48,6 +53,6 @@ public class Scoreboard {
             }
         System.out.println(display);
         }
-        
+
     }
 
